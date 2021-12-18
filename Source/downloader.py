@@ -18,11 +18,11 @@ def main(i):
 ascii_banner = pyfiglet.figlet_format("Spotify Music Downloader")
 print(ascii_banner)
 
-print("Having issues? Go to (read me file of github link)")
+print("Having issues? Go to https://github.com/GiveMeSomeHowaHowa/spotify-playlist-downloader/blob/main/README.md")
 
 
 directory = str(input(termcolor.colored("Please enter the directory you wish to install audio in: ", 'blue')))
-x = str(input((termcolor.colored("Please enter if you would like to download song or playlist: ", 'blue'))))
+x = str(input((termcolor.colored("Please enter if you would like to download a song or playlist: ", 'blue'))))
 
 if x == 'song':
     x = str(input((termcolor.colored("Please enter the name of the song you would like to download: ", 'blue'))))
