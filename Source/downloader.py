@@ -1,3 +1,5 @@
+#                        ATTENTION!!! PLEASE USE YOUR CLIENT ID AND CLIENT SECRET AT LINE 58 IN ORDER TO CONTINUE
+
 from youtube_search import YoutubeSearch
 import os
 import pyfiglet
@@ -7,6 +9,7 @@ import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
 
 os.system('color')
+empty_string = (" ")
 
 def main(i):
     track_name = results['items'][i-1]['track']['name']
@@ -20,9 +23,10 @@ print(ascii_banner)
 
 print("Having issues? Go to https://github.com/GiveMeSomeHowaHowa/spotify-playlist-downloader/blob/main/README.md")
 
-
 directory = str(input(termcolor.colored("Please enter the directory you wish to install audio in: ", 'blue')))
+print(empty_string)
 x = str(input((termcolor.colored("Please enter if you would like to download a song or playlist: ", 'blue'))))
+print(empty_string)
 
 if x == 'song':
     x = str(input((termcolor.colored("Please enter the name of the song you would like to download: ", 'blue'))))
@@ -51,10 +55,10 @@ elif x == 'playlist':
         id_char = playlistt[idx]
         playlist_id = playlist_id + id_char
 
-    sp = spotipy.Spotify(auth_manager=SpotifyClientCredentials(client_id="76044f4b24a648e5848964092830c3e8",client_secret="eb50098885f84b73aa3fc5b469c82ae6"))
+    sp = spotipy.Spotify(auth_manager=SpotifyClientCredentials(client_id="USE YOURS",client_secret="USE YOURS"))
 
     results = sp.playlist_tracks(playlist_id=playlist_id)
-    for x in range(1, results['total']):
+    for x in range(1, results['total'] + 1):
         try:
             main(i)
             i = i+1
