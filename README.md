@@ -44,4 +44,6 @@ Head over to the `Source` folder and download the code.
 
 install the requirements by `pip install -r requirements.txt`
 
+also download ffmpeg with reference to https://www.youtube.com/watch?v=r1AtmY-RMyQ
+
 now run the `downloader.py` and follow the steps mentioned above
