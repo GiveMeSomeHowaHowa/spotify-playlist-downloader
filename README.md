@@ -50,6 +50,6 @@ Also download ffmpeg with reference to https://www.youtube.com/watch?v=r1AtmY-RM
 
 Before you run the `downloader.py` create a spotify developer application, to get your `Client Id` and `Client Secret` and copy and paste them in the respective variables in line 54
 
-![image](https://user-images.githubusercontent.com/96326246/146630564-a7934180-cf69-406e-92d7-f093d0d3e507.png)
+![image](https://user-images.githubusercontent.com/72354934/146638933-3b6420fc-659e-4a11-828d-f6b316b74f97.png)
 
 now run the `downloader.py` with `python downloader.py` in the command prompt and follow the steps mentioned above
