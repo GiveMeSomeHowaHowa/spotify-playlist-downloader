@@ -44,6 +44,4 @@ Head over to the `Source` folder and download the code.
 
 install the requirements by `pip install -r requirements.txt`
 
-also make sure while running the app you have ffmpeg installed, you can use this video as a reference https://www.youtube.com/watch?v=GI7JGouGPsE
-
 now run the `downloader.py` and follow the steps mentioned above
