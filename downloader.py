@@ -18,7 +18,7 @@ def main(i):
 ascii_banner = pyfiglet.figlet_format("Spotify Music Downloader")
 print(ascii_banner)
 
-print("Having issues? Go to (read me file of github link)")
+print("Having issues? Go to https://github.com/GiveMeSomeHowaHowa/spotify-playlist-downloader/blob/main/README.md")
 
 
 directory = str(input(termcolor.colored("Please enter the directory you wish to install audio in: ", 'blue')))
