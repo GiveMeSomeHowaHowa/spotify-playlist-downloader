@@ -14,7 +14,7 @@ You need to input the directory where you want your music downloaded in, for exa
 
 Before you run the `downloader.py` create a spotify developer application, to get your `Client Id` and `Client Secret` and copy and paste them in the respective variables in line 54
 
-![image](https://user-images.githubusercontent.com/96326246/146630471-e80a4c1f-7cc4-4203-9050-31e49cccffee.png)
+![image](https://user-images.githubusercontent.com/96326246/146630564-a7934180-cf69-406e-92d7-f093d0d3e507.png)
 
 If you dont know how to get your directory, here is how:
 
