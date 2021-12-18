@@ -51,7 +51,7 @@ elif x == 'playlist':
         id_char = playlistt[idx]
         playlist_id = playlist_id + id_char
 
-    sp = spotipy.Spotify(auth_manager=SpotifyClientCredentials(client_id="YourClientId",client_secret="ClientSecret))
+    sp = spotipy.Spotify(auth_manager=SpotifyClientCredentials(client_id="YourClientId",client_secret="ClientSecret"))
 
     results = sp.playlist_tracks(playlist_id=playlist_id)
     for x in range(1, results['total']):
