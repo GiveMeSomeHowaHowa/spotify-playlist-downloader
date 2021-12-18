@@ -4,6 +4,8 @@
 
 You can basically understand the process with just this image but for clarity, these are the steps.
 
+Before using the exe download ffmpeg with reference to https://www.youtube.com/watch?v=r1AtmY-RMyQ.
+
 For using the `downloader.exe`, follow these steps:
 
 As soon as you run it you will be asked some questions. Let me guide you through it!
@@ -44,7 +46,7 @@ Head over to the `Source` folder and download the code.
 
 install the requirements by `pip install -r requirements.txt`
 
-also download ffmpeg with reference to https://www.youtube.com/watch?v=r1AtmY-RMyQ
+Also download ffmpeg with reference to https://www.youtube.com/watch?v=r1AtmY-RMyQ
 
 Before you run the `downloader.py` create a spotify developer application, to get your `Client Id` and `Client Secret` and copy and paste them in the respective variables in line 54
 
