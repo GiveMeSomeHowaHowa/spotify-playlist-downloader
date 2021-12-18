@@ -4,13 +4,17 @@
 
 You can basically understand the process with just this image but for clarity, these are the steps.
 
-For using the `downloader.exe`, follow these steps:
+For using the `downloader.py`, follow these steps:
 
 As soon as you run it you will be asked some questions. Let me guide you through it!
 
 ![image](https://user-images.githubusercontent.com/72354934/146515253-296f4059-295a-4bf4-9674-b2336143e228.png)
 
 You need to input the directory where you want your music downloaded in, for example `C:\Users\%USERPROFILE%\Videos\Music`. 
+
+Before you run the `downloader.py` create a spotify developer application, to get your `Client Id` and `Client Secret` and copy and paste them in the respective variables in line 54
+
+![image](https://user-images.githubusercontent.com/96326246/146630471-e80a4c1f-7cc4-4203-9050-31e49cccffee.png)
 
 If you dont know how to get your directory, here is how:
 
@@ -46,4 +50,4 @@ install the requirements by `pip install -r requirements.txt`
 
 also download ffmpeg with reference to https://www.youtube.com/watch?v=r1AtmY-RMyQ
 
-now run the `downloader.py` and follow the steps mentioned above
+now run the `downloader.py` with `python downloader.py` in the command prompt and follow the steps mentioned above
