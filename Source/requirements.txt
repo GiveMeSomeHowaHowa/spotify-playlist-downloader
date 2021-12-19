@@ -1,6 +1,5 @@
 spotipy
 pyfiglet
 youtube_search
-subprocess
 termcolor
 ffmpeg
