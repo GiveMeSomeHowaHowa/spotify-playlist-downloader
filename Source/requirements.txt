@@ -3,3 +3,4 @@ pyfiglet
 youtube_search
 termcolor
 ffmpeg
+youtube-dl
