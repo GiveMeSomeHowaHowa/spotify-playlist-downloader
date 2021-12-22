@@ -11,6 +11,8 @@ from spotipy.oauth2 import SpotifyClientCredentials
 os.system('color')
 empty_string = (" ")
 
+missed_songs = []
+
 def main(i):
     track_name = results['items'][i-1]['track']['name']
     artist_name = results['items'][i-1]['track']['album']['artists'][0]['name']
@@ -42,7 +44,6 @@ if x == 'song':
 elif x == 'playlist':
     playlistt = []
     song_list = []
-    missed_songs = []
     playlist_id = ''
     i = 1
 
