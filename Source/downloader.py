@@ -6,12 +6,13 @@ import pyfiglet
 import termcolor
 import subprocess
 import spotipy
-from spotipy.oauth2 import SpotifyClientCredentials
-
-os.system('color')
-empty_string = (" ")
+from spotipy.oauth2 import SpotifyClientCredentials, _make_authorization_headers
 
 missed_songs = []
+
+os.chdir(os.path.dirname(os.path.realpath(__file__)))
+
+os.system('color')
 
 def main(i):
     track_name = results['items'][i-1]['track']['name']
@@ -23,23 +24,26 @@ def main(i):
 ascii_banner = pyfiglet.figlet_format("Spotify Music Downloader")
 print(ascii_banner)
 
-print("Having issues? Go to https://github.com/GiveMeSomeHowaHowa/spotify-playlist-downloader/blob/main/README.md")
+print("Having issues? Go to (read me file of github link)")
+
 
 directory = str(input(termcolor.colored("Please enter the directory you wish to install audio in: ", 'blue')))
-print(empty_string)
-x = str(input((termcolor.colored("Please enter if you would like to download a song or playlist: ", 'blue'))))
-print(empty_string)
+x = str(input((termcolor.colored("Please enter if you would like to download song or playlist: ", 'blue'))))
 
 if x == 'song':
-    x = str(input((termcolor.colored("Please enter the name of the song you would like to download: ", 'blue'))))
-    print(termcolor.colored(f"Downloading: {x}", "yellow"))
-    result = YoutubeSearch(x, max_results=1).to_dict()
+    try:
+        x = str(input((termcolor.colored("Please enter the name of the song you would like to download: ", 'blue'))))
+        print(termcolor.colored(f"Downloading: {x}", "yellow"))
+        result = YoutubeSearch(x, max_results=1).to_dict()
 
-    url_suffix = result[0]['url_suffix']
-    url = "https://youtube.com"+url_suffix
+        url_suffix = result[0]['url_suffix']
+        url = "https://youtube.com"+url_suffix
 
-    subprocess.check_output(f'youtube-dl --extract-audio --audio-format mp3 --output "{directory}\%(title)s.%(ext)s" {url}', shell=True)
-    print(termcolor.colored(f"Downloaded {x}", "green"))
+        subprocess.check_output(f'youtube-dl --extract-audio --audio-format mp3 --output "{directory}\%(title)s.%(ext)s" {url}', shell=True)
+        print(termcolor.colored(f"Downloaded {result[0]['title']}", "green"))
+
+    except subprocess.CalledProcessError:
+        missed_songs.append(result[0]['title'])
 
 elif x == 'playlist':
     playlistt = []
@@ -59,7 +63,7 @@ elif x == 'playlist':
     sp = spotipy.Spotify(auth_manager=SpotifyClientCredentials(client_id="USE YOURS",client_secret="USE YOURS"))
 
     results = sp.playlist_tracks(playlist_id=playlist_id)
-    for x in range(1, results['total'] + 1):
+    for x in range(1, results['total']+1):
         try:
             main(i)
             i = i+1
@@ -82,20 +86,24 @@ elif x == 'playlist':
 
             subprocess.check_output(f'youtube-dl --extract-audio --audio-format mp3 --output "{directory}\%(title)s.%(ext)s" {url}', shell=True)
 
-            print(termcolor.colored(f"Downloaded: {index}", "green"))
+            print(termcolor.colored(f"Downloaded: {result[0]['title']}", "green"))
             print('')
 
         except subprocess.CalledProcessError:
-            missed_songs.append(index)
+            missed_songs.append(result[0]['title'])
             continue
+
 else:
     print(termcolor.colored("NOT A VALID OPTION EXITING THE PROGRAM",'red'))
     exit()
 
 counter = 1
 
-if len(missed_songs):
-    print("The missed songs are: ")
+if len(missed_songs) >= 1:
+    print("The missed songs are please try again: ")
     for x in missed_songs:
         print(f'{counter}. {x}')
         counter = counter+1 
+
+elif len(missed_songs) == 1:
+    print("The following song couldnt be downloaded please try again: ")
