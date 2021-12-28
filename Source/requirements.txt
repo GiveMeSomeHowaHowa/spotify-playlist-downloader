@@ -4,3 +4,4 @@ youtube_search
 termcolor
 ffmpeg
 youtube-dl
+pypresence
