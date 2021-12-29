@@ -30,7 +30,7 @@ def main(i):
 ascii_banner = pyfiglet.figlet_format("Spotify Music Downloader")
 print(ascii_banner)
 
-print("Having issues? Go to (read me file of github link)")
+print("Having issues? Go to https://github.com/GiveMeSomeHowaHowa/spotify-playlist-downloader/blob/main/README.md")
 
 
 directory = str(input(termcolor.colored("Please enter the directory you wish to install audio in: ", 'blue')))
@@ -96,13 +96,13 @@ elif x == 'playlist':
             print(termcolor.colored(f"{counterr}.Downloading: {index}", "yellow"))
             result = YoutubeSearch(index, max_results=1).to_dict()
             song_name = result[0]['title']
-            RPC.update(state=f"Downloading {song_name}", large_image="spotify", large_text="Spotify Music Downloader",start = int(time.time()) ,buttons= [{"label": "Download Downloader", "url": "https://github.com/GiveMeSomeHowaHowa/spotify-playlist-downloader"}, {'label': 'Visit the Song', "url": url}  ] )
+            
             counterr = counterr +1
             url_suffix = result[0]['url_suffix']
             url = "https://youtube.com"+url_suffix
-
+            RPC.update(state=f"Downloading {song_name}", large_image="spotify", large_text="Spotify Music Downloader",start = int(time.time()) ,buttons= [{"label": "Download Downloader", "url": "https://github.com/GiveMeSomeHowaHowa/spotify-playlist-downloader"}, {'label': 'Visit the Song', "url": url}  ] )
+            
             subprocess.check_output(f'youtube-dl --extract-audio --audio-format mp3 --output "{directory}\%(title)s.%(ext)s" {url}', shell=True)
-
             print(termcolor.colored(f"Downloaded: {song_name}", "green"))
             print('')
 
