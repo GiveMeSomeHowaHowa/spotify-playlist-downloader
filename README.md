@@ -6,6 +6,7 @@ FFMPEG: https://www.youtube.com/watch?v=r1AtmY-RMyQ.
 YOUTUBE-DL: https://danclowry.com/blog/youtube-dl-windows-install/
 
 ![image](https://user-images.githubusercontent.com/72354934/146514933-d6280a07-3990-4b45-a589-8e40b5db0d44.png)
+![image](https://user-images.githubusercontent.com/72354934/147679395-f36d515a-386d-4c27-b1d8-7c93c3a088af.png)
 
 You can basically understand the process with just this image but for clarity, these are the steps.
 
