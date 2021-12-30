@@ -2,7 +2,6 @@
 
 **ATTENTION!!! BEFORE RUNNING THE FILE MAKE SURE YOU HAVE INSTALL FFMPEG AND YOUTUBE-DL. IF NOT, FOLLOW THIS**
 
-FFMPEG: https://www.youtube.com/watch?v=r1AtmY-RMyQ.
 YOUTUBE-DL: https://danclowry.com/blog/youtube-dl-windows-install/
 
 ![image](https://user-images.githubusercontent.com/72354934/146514933-d6280a07-3990-4b45-a589-8e40b5db0d44.png)
