@@ -54,3 +54,6 @@ Before you run the `downloader.py` create a spotify developer application, to ge
 ![image](https://user-images.githubusercontent.com/72354934/146638933-3b6420fc-659e-4a11-828d-f6b316b74f97.png)
 
 now run the `downloader.py` with `python downloader.py` in the command prompt and follow the steps mentioned above
+
+Edit:
+     `downloader.exe` app has been removed
