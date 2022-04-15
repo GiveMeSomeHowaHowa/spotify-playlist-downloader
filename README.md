@@ -2,6 +2,7 @@
 
 Extract the zip file and keep the ffmpeg.exe in the same directory as the downloader.py
 
+
 ![image](https://user-images.githubusercontent.com/72354934/146514933-d6280a07-3990-4b45-a589-8e40b5db0d44.png)
 
 It even shows in your discord activity!
