@@ -179,7 +179,7 @@ INVALID PLAYLIST LINK EXITING PROGRAMME """, "red"))
         except:
             missed_songs.append(song_list[i2-1])
             print(f"The song has been queued for downloading later due to an unexpected error.")
-            print(missed_songs)
+       
 else:
     print(termcolor.colored("NOT A VALID OPTION EXITING THE PROGRAM",'red'))
     exit()
