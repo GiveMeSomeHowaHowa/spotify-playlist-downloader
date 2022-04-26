@@ -105,7 +105,7 @@ elif x == 'playlist':
 INVALID PLAYLIST LINK EXITING PROGRAMME """, "red"))
         exit()
 
-    sp = spotipy.Spotify(auth_manager=SpotifyClientCredentials(client_id="YourClientId",client_secret="YourClientSecret"))
+    sp = spotipy.Spotify(auth_manager=SpotifyClientCredentials(client_id="76044f4b24a648e5848964092830c3e8",client_secret="eb50098885f84b73aa3fc5b469c82ae6"))
 
     results = sp.playlist_tracks(playlist_id=playlist_id)
     for x in range(1, results['total']+1):
